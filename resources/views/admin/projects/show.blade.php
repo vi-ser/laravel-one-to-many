@@ -16,7 +16,7 @@
                     {{ $project->name }}
                 </h3>
                 <small></small>
-                <span class="badge bg-black text-white mb-4">{{$project->type->name}}</span>
+                <span class="badge bg-black text-white mb-4">{{$project->type?->name}}</span>
 
                 <br>
 

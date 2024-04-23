@@ -10,7 +10,7 @@
             Modifica progetto
         </h2>
 
-        <form action="{{route('admin.projects.update', $project->id)}}" method="POST" class="pt-5" enctype="multipart/form-data">
+        <form action="{{route('admin.projects.update', $project->id)}}" method="project" class="pt-5" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -22,6 +22,18 @@
                   {{$message}}
               </div>
               @enderror
+            </div>
+
+            <div class="mb-3">
+                <label for="type_id">Tipologia</label>
+                <select class="form-select" name="type_id" id="type_id">      
+                    <option value=""></option>
+                    @foreach ($types as $type)
+                    <option value="{{$type->id}}" {{ $type->id == old('type_id', $project->type ? $project->type->id : '') ? 'selected' : '' }}>
+                        {{ $type->name }}
+                    </option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="mb-3">
