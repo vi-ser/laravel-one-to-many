@@ -2,15 +2,15 @@
 
 @section('content')
 
-<div id="projects">
+<div id="project">
 
-    <div class="container">
+    <div class="container p-5">
 
-        <h2 class="text-white fw-bold">
+        <h2 class="fw-bold">
             Modifica progetto
         </h2>
 
-        <form action="{{route('admin.projects.update', $project->id)}}" method="POST" class="p-5" enctype="multipart/form-data">
+        <form action="{{route('admin.projects.update', $project->id)}}" method="POST" class="pt-5" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -75,7 +75,7 @@
             </div>
             
 
-            <button type="submit" class="btn btn-primary mt-3">Modifica</button>
+            <button type="submit" class="btn btn-primary mt-3">Salva</button>
         </form>
        
     </div>

@@ -4,13 +4,13 @@
 
 <div id="projects">
 
-    <div class="container">
+    <div class="container p-5">
 
-        <h2 class="text-white fw-bold">
-            Aggiungi progetto
+        <h2 class="fw-bold">
+            Nuovo progetto
         </h2>
 
-        <form action="{{ route('admin.projects.store')}}" method="POST" class="p-5" enctype="multipart/form-data">
+        <form action="{{ route('admin.projects.store')}}" method="POST" class="pt-5" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
