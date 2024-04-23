@@ -15,6 +15,7 @@
                 <h3>
                     {{ $project->name }}
                 </h3>
+                <small>{{$project->type->name}}</small>
 
                 <br>
 
