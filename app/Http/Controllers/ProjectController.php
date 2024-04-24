@@ -6,6 +6,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 use App\Models\Type;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -66,6 +67,7 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+
     public function edit(Project $project)
     {
         $types = Type::all();

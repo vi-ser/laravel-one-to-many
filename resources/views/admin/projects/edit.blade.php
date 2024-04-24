@@ -10,7 +10,7 @@
             Modifica progetto
         </h2>
 
-        <form action="{{route('admin.projects.update', $project->id)}}" method="project" class="pt-5" enctype="multipart/form-data">
+        <form action="{{route('admin.projects.update', $project->id)}}" method="POST" class="pt-5" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
